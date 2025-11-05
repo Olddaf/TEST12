@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroBanner from "./components/HeroBanner";
 import MovieRow from "./components/MovieRow";
+import Footer from "./components/Footer";
 import { mockMovies } from "./mockData";
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
       <Navbar />
       <HeroBanner />
       
-      <div className="relative z-10 -mt-32 md:-mt-40 space-y-8 pb-20">
+      <div className="relative z-10 -mt-32 md:-mt-40 space-y-4 pb-10">
         <MovieRow title="Trending Now" movies={mockMovies.trending} />
         <MovieRow title="Netflix Originals" movies={mockMovies.netflixOriginals} />
         <MovieRow title="Action Movies" movies={mockMovies.action} />
@@ -21,6 +22,8 @@ const Home = () => {
         <MovieRow title="Documentaries" movies={mockMovies.documentaries} />
         <MovieRow title="Romance" movies={mockMovies.romance} />
       </div>
+      
+      <Footer />
     </div>
   );
 };
